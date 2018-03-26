@@ -1,0 +1,95 @@
+<!doctype>
+<html>
+<head>
+Login </head>
+<body>
+<div class="container mainContainer">
+<div class="header col-lg-12 col-md-12 col-sm-12 c0l-xs-12">
+
+<div col-lg-3 col-md-3 col-sm-3 col-xs-3>
+    <div class="mainTextDiv">
+        <div class="mainText">Test</div>
+    </div>
+  </div>
+
+<div class="MenuListDiv col-lg-3 col-md-4 col-sm-6 col-xs-6">
+
+  <ol class="MenuList">
+    <li class="menuListli">
+  <a  class="MenuItem" *ngFor="let menu of menus; let i=index"  (click)="getData(i,menu)">{{menu.name}}
+</a>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div class="loginContainer">
+<div class="loginForm">
+<div class="loginSwitch">
+<div [ngSwitch]="loginSwitch">
+  <form  #loginForm="ngForm" *ngSwitchDefault>
+    <div class="form-group">
+      <input  type="text" class="form-control" id="usr" placeholder="username" [(ngModel)]="username" name="username"  #name="ngModel"  required>
+    </div>
+
+    <div class="form-group">
+      <input type="password" class="form-control" id="pwd" placeholder="password" [(ngModel)]="password" name="password" #mypassword="ngModel"   required>
+    </div>
+
+
+    <div class="form-group submitbtnDiv">
+      <button type="button" class="btn btn-success submitBtn"   [disabled]="!loginForm.valid" (click)="submit(loginForm)">{{buttonName}}</button>
+    </div>
+    <div  [hidden]="name.valid || !(name.dirty || name.touched)">
+           <div class="text-danger">Please enter username </div>
+    </div>
+    <div  [hidden]="mypassword.valid || !(mypassword.dirty || mypassword.touched)">
+           <div class="text-danger">Please enter Password</div>
+    </div>
+
+
+    <div class="loginForgotTextDiv">
+        <label *ngIf="loginClick" class="logintext" (click)="OnLogin('register')">register</label>
+        <label *ngIf="forgotPassClick"class="forgotpasswordtext" (click)="OnForgotPassword('ForgotPassword')">forgot password?</label>
+    </div>
+  </form>
+
+<form *ngSwitchCase="'register'">
+  <div class="form-group">
+    <input type="text" class="form-control" id="usr" placeholder="Full Name">
+  </div>
+  <div class="form-group">
+    <input  type="text" class="form-control" id="usr" placeholder="username">
+  </div>
+  <div class="form-group">
+    <input type="password" class="form-control" id="pwd" placeholder="password">
+  </div>
+  <div class="form-group submitbtnDiv">
+    <button type="button" class="btn btn-success submitBtn" (click)="createUser()">{{buttonName}}</button>
+</div>
+<div class="loginForgotTextDiv">
+    <label  *ngIf="RegisterClick" class="RegisterText" (click)="OnLogin('login')">login</label>
+    <label *ngIf="forgotPassClick"class="forgotpasswordtext" (click)="OnForgotPassword('ForgotPassword')">forgot password?</label>
+    </div>
+</form>
+
+<form  *ngSwitchCase="'forgotPassword'">
+  <div class="form-group">
+    <input type="text" class="form-control" id="usr" placeholder="email">
+  </div>
+
+<div class="form-group submitbtnDiv">
+  <button type="button" class="btn btn-success submitBtn">{{buttonName}}</button>
+</div>
+<div class="BackTologinDiv">
+  <label  *ngIf="RegisterClick" class="RegisterText" (click)="OnLogin('login')">Back to login</label>
+    </div>
+</form>
+
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

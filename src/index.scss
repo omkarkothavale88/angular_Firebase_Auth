@@ -1,0 +1,295 @@
+html, body, #root {
+  margin: 0;
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body, h1, h2, h3 {
+  font-weight: 300
+}
+
+a {
+  color: white;
+  text-decoration: none;
+
+  &:hover {
+    color: #5aadbb;
+  }
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #1f1f1f;
+}
+.header-title {
+  flex: 1;
+  font-size: 1.5rem;
+  margin: 1rem;
+}
+.header-date {
+  flex: 1;
+  text-align: right;
+  margin: 1rem;
+  color: white;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background-color: #cf4646;
+  color: white;
+}
+.title-h1 {
+  font-weight: 300;
+  font-size: 4rem;
+  margin: 1rem;
+}
+.title-logo {
+  height: 12rem;
+  background-color: white;
+  border-radius: 1rem;
+  margin: 1rem;
+}
+.title-h2 {
+  font-weight: 300;
+  font-size: 2rem;
+  margin: .5rem;
+}
+
+.footer {
+  padding: 0.5rem;
+  font-size: 1rem;
+  background-color: #1f1f1f;
+  text-align: center;
+  color: white;
+}
+
+.techs-container {
+  margin: 1rem;
+}
+.techs-h2 {
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+.techs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.tech {
+  height: 15rem;
+  width: 15rem;
+  border: 1px solid lightgray;
+  border-radius: 1rem;
+  margin: 1rem;
+  padding: 1rem;
+}
+.tech-logo {
+  width: 5rem;
+  height: 5rem;
+  float: right;
+  margin: 0 0 .5rem .5rem;
+}
+.tech-h3 {
+  font-size: 1.5rem;
+  margin: 0 0 2rem 0;
+}
+
+
+.MenuList{
+
+          float: "left";
+          padding: 0;
+          margin: 0;
+          width: 100%;
+height: 100%;
+}
+
+.menuListli{
+line-height: 1;
+display: inline-flex;
+height: 100%
+
+}
+
+
+
+.menuListli:hover{
+
+
+  text-decoration: none;
+}
+.MenuItem{
+  padding: 15px;
+  height: 100%;
+  display: inline-flex;
+      align-items: center;
+      border: 1px solid black;
+      color: white;
+      font-size: 20px;
+      font-family: monospace;
+      font-weight: 600;
+      float: left;
+      position: relative;
+      list-style-type: none;
+      cursor: pointer;
+
+        }
+
+
+
+
+
+.one {
+    color: green;
+}
+.box{
+
+      width: 200px;
+      height: 200px;
+      background-color: #ffc125;
+}
+
+.header{
+  background-color: #000;
+  width: 100%;
+  height: 80px;
+}
+.leftPanel{
+
+  padding: 0 !important;
+  background-color:aliceblue;
+}
+.rightPanel{
+  padding: 0 !important;
+  height: 100%;
+
+}
+.mainContainer{
+padding: 0 !important;
+width: 100% !important;
+}
+
+.mainText{
+  text-align: center;
+  padding: 19px;
+}
+
+.mainTextDiv{
+background-color: rebeccapurple;
+font-size: 30px;
+font-family: monospace;
+font-weight: bold;
+color: antiquewhite;
+top:0;
+}
+
+
+.MenuListDiv{
+  // height: 100%;
+  position: absolute;
+  right: 0;
+  height: 100%;
+}
+
+@media(max-width:535px) {
+.MenuListDiv  {
+    width: 60%;
+}
+}
+
+.MenuItem:hover{
+
+
+    background-color: rebeccapurple;
+  text-decoration: none;
+  color: white;
+}
+
+.loginContainer{
+
+width: 100%;
+height:100%;
+background: linear-gradient(black, rebeccapurple);
+position: absolute;
+}
+
+.loginForm{
+
+  height: 250px;
+  margin: 0 auto;
+  margin-top: 100px;
+  width: 250px;
+}
+
+.submitbtnDiv{
+  text-align: center;
+}
+
+.submitBtn{
+
+  width:100%;
+font-family: monospace !important;
+font-weight: bold !important;
+}
+.loginForgotText{
+
+
+}
+
+.logintext{
+
+float:rigft !important;
+color: darkgrey;
+font-family: monospace;
+cursor: pointer;
+}
+
+
+.forgotpasswordtext{
+  cursor: pointer;
+  float: right;
+
+color: darkgrey;
+font-family: monospace;
+
+}
+.label{
+  color: white !important ;
+}
+
+.logintext:hover{
+  color:white;
+}
+
+.forgotpasswordtext:hover{
+    color:white;
+
+}
+.RegisterText{
+  color: darkgrey;
+  font-family: monospace;
+}
+
+.RegisterText:hover{
+    color:white;
+}
+.BackTologinDiv{
+  text-align: center;
+}
